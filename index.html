@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+        <script type="text/template" id="temp_steps">
+           <h2>Lets schedule a <select name="select" id="service_type">
+                          <option value="haircut">Haircut</option> 
+                          <option value="nails" selected>Nails</option>
+                          <option value="pedicure">Pedicure</option>
+                        </select> for <input type="text" id="client_name" placeholder="enter your name" />  
+                         on <span class="highlight"><%= display_day %> <%= display_month %> <%= dateDay %>, <%= dateYear %></span> </h2>
+            
+        </script>
+
+        <script type="text/template" id="temp_active_days">
+            <div class="dayCell" data-day="<%= day_number %>"><div class="availInfo"></div><%= day_number %></div>
+        </script>
+        <script type="text/template" id="temp_service_type">
+        
+            <div class="service-type-wrap"><img src="http://www.placehold.it/300x300" /></div>
+            <div class="service-type-wrap"><img src="http://www.placehold.it/300x300" /></div>
+            <div class="service-type-wrap"><img src="http://www.placehold.it/300x300" /></div>
+            <div class="service-type-wrap"><img src="http://www.placehold.it/300x300" /></div>
+            <div class="service-type-wrap"><img src="http://www.placehold.it/300x300" /></div>
+        </script>                                    
+        <script type="text/template" id="temp_time_select">
+        
+        <div class="time-popup" data-day="<%= dateDay %><%= dateMonth %><%= dateYear %>">
+           <div class="dateTimeWrap">
+          
+                <div class="bookingStepWidget" id="calendarDisplay">
+                    
+                    <span class="dayCalDisplay"><%= display_day %></span>
+                    <span class="dateCalDisplay"><%= display_date %></span>
+                    <span class="monthCalDisplay"><%= display_month %></span>
+                </div>
+               
+               
+               <div class="bookingStepWidget <% if(!time_display) { %>closed<% } %>" id="clockDisplay">
+
+                    <div id="clock">
+                        <div id="center"></div>
+                        <div data-hour="10" id="hour"></div>
+                        <div data-minute="30" id="minute"></div>
+                        <span  class="monthCalDisplay"><%= time_display %></span>
+                    </div>
+               </div>
+
+               <div class="bookingStepWidget <% if(!service) { %>closed<% } %>" id="serviceDisplay">
+
+                    <span class="dateCalDisplay"><%= service %><span>
+               </div>    
+
+                <a href="#" class="closeMe">Pick a Different Day</a>
+               <div class="cf"></div>
+           </div>
+           
+               
+           <div class="availableTimesWrap">
+               <h2>Available times:</h2>                   
+               
+            </div>
+            <div class="cf"></div>
+           </div>
+           
+
+        </script>
+
+        <script type="text/template" id="temp_available_time_button">
+            <a href="#" class="bookNowBtn" data-time-slot="<%= time_slot %>"><%= time_slot_display %></a>
+        </script>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <section id="booking-engine" class="page-section closed">
+                <a href="#" id="close_booking">X</a>
+            
+                <section class="booking-step" id="calendar"></section>
+
+                <section class="booking-step" id="details"></section>
+
+                <div class="cf"></div>
+        </section>
+
+        <section id="intro" class="page-section">
+            <h1>Salon App</h1>
+            <a href="#" id="start_booking">Make a booking</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, excepturi, tenetur minima veniam voluptate vitae odit temporibus soluta omnis quas illum cumque est perferendis amet dignissimos error placeat a dicta?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dignissimos, eum, nam consequatur quaerat fugit hic ab officia natus porro sunt veritatis ad dolor odit amet modi labore rem unde!</p>
+        </section>
+                <section id="about" class="page-section">
+            <h1>Salon App</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, excepturi, tenetur minima veniam voluptate vitae odit temporibus soluta omnis quas illum cumque est perferendis amet dignissimos error placeat a dicta?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dignissimos, eum, nam consequatur quaerat fugit hic ab officia natus porro sunt veritatis ad dolor odit amet modi labore rem unde!</p>
+        </section>
+                <section id="location" class="page-section">
+            <h1>Salon App</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, excepturi, tenetur minima veniam voluptate vitae odit temporibus soluta omnis quas illum cumque est perferendis amet dignissimos error placeat a dicta?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dignissimos, eum, nam consequatur quaerat fugit hic ab officia natus porro sunt veritatis ad dolor odit amet modi labore rem unde!</p>
+        </section>
+                <section id="contact" class="page-section">
+            <h1>Salon App</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, excepturi, tenetur minima veniam voluptate vitae odit temporibus soluta omnis quas illum cumque est perferendis amet dignissimos error placeat a dicta?</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dignissimos, eum, nam consequatur quaerat fugit hic ab officia natus porro sunt veritatis ad dolor odit amet modi labore rem unde!</p>
+        </section>
+
+        <!-- Add your site or application content here -->
+        
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <Script src="bower_components/momentjs/moment.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <!-- <script src="js/prefixfree.js"></script> -->
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
+

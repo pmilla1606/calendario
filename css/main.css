@@ -1,0 +1,1020 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+body,html{
+    width:100%;
+    height:100%;
+}
+
+.booking_section{
+    width:100%;
+    height:100%;
+}
+
+#entry_input,
+#steps{
+    width:100%;
+    margin:auto;
+    height:100px;
+}
+
+
+
+
+
+.prevMonth,
+.nextMonth{
+    width:50%;
+    display: block;
+    float:left;
+}
+
+.prevMonth{text-align:left;}
+.nextMonth{text-align: right;}
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+.animated {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+
+  80% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounceInUp {
+  animation-name: bounceInUp;
+}
+@keyframes bounceOutDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRightBig {
+  animation-name: fadeInRightBig;
+}
+
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+}
+
+.fadeOutLeftBig {
+  animation-name: fadeOutLeftBig;
+}
+
+.bounceOutDown {
+  animation-name: bounceOutDown;
+}
+
+
+
+.animation-target {
+  animation: animation 750ms linear both;
+}
+
+/* Generated with Bounce.js. Edit at http://bouncejs.com/#{s:[{T:"k",e:"s",d:750,D:0,f:{x:0,y:0},t:{x:40,y:60},s:3,b:4},{T:"c",e:"b",d:750,D:0,f:{x:0,y:0},t:{x:1,y:1},s:2,b:4}]} */
+
+@keyframes animation { 
+  0% {display:block; transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  2.222222% { transform: matrix3d(0.22857, 0.05116, 0, 0, 0.0338, 0.22857, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  4.444444% { transform: matrix3d(0.45383, 0.15188, 0, 0, 0.09925, 0.45383, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.666667% { transform: matrix3d(0.65416, 0.23546, 0, 0, 0.1534, 0.65416, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  8.888889% { transform: matrix3d(0.81817, 0.27003, 0, 0, 0.17654, 0.81817, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  11.111111% { transform: matrix3d(0.9422, 0.25718, 0, 0, 0.16916, 0.9422, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.333333% { transform: matrix3d(1.02792, 0.21403, 0, 0, 0.14156, 1.02792, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  15.555556% { transform: matrix3d(1.08031, 0.15885, 0, 0, 0.10548, 1.08031, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  17.777778% { transform: matrix3d(1.10592, 0.105, 0, 0, 0.06988, 1.10592, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20% { transform: matrix3d(1.1117, 0.05994, 0, 0, 0.03994, 1.1117, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  22.222222% { transform: matrix3d(1.10412, 0.02641, 0, 0, 0.0176, 1.10412, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  24.444444% { transform: matrix3d(1.08871, 0.00405, 0, 0, 0.0027, 1.08871, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.666667% { transform: matrix3d(1.0698, -0.00905, 0, 0, -0.00603, 1.0698, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  28.888889% { transform: matrix3d(1.05057, -0.01531, 0, 0, -0.01021, 1.05057, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  31.111111% { transform: matrix3d(1.03306, -0.01699, 0, 0, -0.01133, 1.03306, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.333333% { transform: matrix3d(1.01844, -0.01593, 0, 0, -0.01062, 1.01844, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  35.555556% { transform: matrix3d(1.00716, -0.01347, 0, 0, -0.00898, 1.00716, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  37.777778% { transform: matrix3d(0.99917, -0.0105, 0, 0, -0.007, 0.99917, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40% { transform: matrix3d(0.99411, -0.00758, 0, 0, -0.00505, 0.99411, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  42.222222% { transform: matrix3d(0.99145, -0.00503, 0, 0, -0.00335, 0.99145, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  44.444444% { transform: matrix3d(0.9906, -0.00297, 0, 0, -0.00198, 0.9906, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.666667% { transform: matrix3d(0.991, -0.00144, 0, 0, -0.00096, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  48.888889% { transform: matrix3d(0.99217, -0.00038, 0, 0, -0.00025, 0.99217, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  51.111111% { transform: matrix3d(0.99372, 0.00029, 0, 0, 0.00019, 0.99372, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.333333% { transform: matrix3d(0.99535, 0.00064, 0, 0, 0.00043, 0.99535, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  55.555556% { transform: matrix3d(0.99687, 0.00077, 0, 0, 0.00052, 0.99687, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  57.777778% { transform: matrix3d(0.99817, 0.00076, 0, 0, 0.00051, 0.99817, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60% { transform: matrix3d(0.99919, 0.00067, 0, 0, 0.00044, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  62.222222% { transform: matrix3d(0.99993, 0.00054, 0, 0, 0.00036, 0.99993, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  64.444444% { transform: matrix3d(1.00041, 0.0004, 0, 0, 0.00026, 1.00041, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.666667% { transform: matrix3d(1.00068, 0.00027, 0, 0, 0.00018, 1.00068, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  68.888889% { transform: matrix3d(1.00079, 0.00017, 0, 0, 0.00011, 1.00079, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  71.111111% { transform: matrix3d(1.00077, 0.00009, 0, 0, 0.00006, 1.00077, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.333333% { transform: matrix3d(1.00069, 0.00003, 0, 0, 0.00002, 1.00069, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  75.555556% { transform: matrix3d(1.00056, -0.00001, 0, 0, 0, 1.00056, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  77.777778% { transform: matrix3d(1.00043, -0.00003, 0, 0, -0.00002, 1.00043, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80% { transform: matrix3d(1.00029, -0.00004, 0, 0, -0.00002, 1.00029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  82.222222% { transform: matrix3d(1.00018, -0.00004, 0, 0, -0.00002, 1.00018, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  84.444444% { transform: matrix3d(1.00009, -0.00003, 0, 0, -0.00002, 1.00009, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.666667% { transform: matrix3d(1.00002, -0.00003, 0, 0, -0.00002, 1.00002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  88.888889% { transform: matrix3d(0.99997, -0.00002, 0, 0, -0.00001, 0.99997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  91.111111% { transform: matrix3d(0.99995, -0.00001, 0, 0, -0.00001, 0.99995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.333333% { transform: matrix3d(0.99994, -0.00001, 0, 0, -0.00001, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  95.555556% { transform: matrix3d(0.99993, 0, 0, 0, 0, 0.99993, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  97.777778% { transform: matrix3d(0.99994, 0, 0, 0, 0, 0.99994, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+}
+
+
+@keyframes animationFrames{
+  0% {
+    left:0px;
+    top:0px;
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  100% {
+    left:0px;
+    top:-1000px;
+    opacity:0;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    left:0px;
+    top:0px;
+    opacity:1;
+    -moz-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  100% {
+    left:0px;
+    top:-1000px;
+    opacity:0;
+    -moz-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    left:0px;
+    top:0px;
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  100% {
+    left:0px;
+    top:-1000px;
+    opacity:0;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    left:0px;
+    top:0px;
+    opacity:1;
+    -o-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  100% {
+    left:0px;
+    top:-1000px;
+    opacity:0;
+    -o-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    left:0px;
+    top:0px;
+    opacity:1;
+    -ms-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+  100% {
+    left:0px;
+    top:-1000px;
+    opacity:0;
+    -ms-transform:  rotate(0deg) scaleX(1) scaleY(1) skewX(0deg) skewY(0deg) ;
+  }
+}
+
+
+
+
+body,html{
+    padding:0;
+    margin:0;
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    width:100%;
+    height:100%;
+}
+
+section{
+    width:100%;
+    min-height:100%;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-section{
+    padding:5%;
+}
+
+
+.fixed-header{
+  height:100px;
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: #34495e;
+  min-height: 0;
+}
+
+
+#calendar{
+    position:relative;
+    /*min-width:770px;*/
+    width:100%;
+    margin:0;
+    height:100%;
+    background-color:#fff;
+}
+
+.booking-step{
+
+
+    width:100%;
+    height:100%;
+
+}
+
+.booking-step.animated{
+  opacity: inherit;
+}
+
+
+.booking-step.depress{
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+    animation: animationFrames linear 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: ;
+  -webkit-animation: animationFrames linear 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: ;
+  -moz-animation: animationFrames linear 0.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: ;
+  -o-animation: animationFrames linear 0.5s;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: ;
+  -ms-animation: animationFrames linear 0.5s;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: ;
+}
+
+.booking-step.repress{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+section#booking-engine{
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  background: white;
+  width: 90%;
+  height: 90%;
+  
+  min-height: 0;
+  
+  padding:2.5% 5%;
+  overflow: hidden;
+}
+section#booking-engine.closed{
+  display: none;
+}
+section#name{display: block; }
+.overlay{position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.3);}
+span.highlight{
+  background-color:rgb(250, 255, 192);
+}
+
+/*#dates{
+    width:80%;
+    border:1px solid #ccc;
+    margin:auto;
+    margin-top:100px;
+    float:none;
+}*/
+.day-header,
+.dayCell{
+    width:12.9%;
+    height:100px;
+    border:1px solid #34495e;
+     position:relative;
+    -webkit-transition: background 75ms ease-in;
+    -moz-transition: background 75ms ease-in;
+    -ms-transition: background 75ms ease-in;
+    -o-transition: background 75ms ease-in;
+    transition: background 75ms ease-in;
+    float:left;
+    margin:0.5%;
+    cursor:pointer;
+}
+.dayCell.blank{
+  opacity: 0.1;
+  cursor: default;
+  background-color: #34495e;
+}
+
+.dayCell.blank:active{
+  -moz-transform: scale(1);
+-webkit-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+    transform: scale(1);
+}
+.dayCell.blank:hover{
+  background-color:#34495e;
+}
+.day-header{
+    border:none;
+    height:auto;
+    text-align: center;
+}
+.day{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    color:#34495e;
+    text-align:right;
+    font-weight:bolder;
+    padding:0.25em;
+    -webkit-transition: all 75ms ease-in;
+    -moz-transition: all 75ms ease-in;
+    -ms-transition: all 75ms ease-in;
+    -o-transition: all 75ms ease-in;
+    transition: all 75ms ease-in;
+}
+
+.dayCell.selected,
+.dayCell.expanded,
+.dayCell:hover{background:#34495e; z-index:9;}
+
+.dayCell.selected .day,
+.dayCell.expanded .day,
+.dayCell:hover .day{color:white;}
+a:active,
+.dayCell:active{-moz-transform: scale(0.95);
+-webkit-transform: scale(0.95);
+-o-transform: scale(0.95);
+-ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.dayCell.expanded:active{
+    -moz-transform: scale(1);
+-webkit-transform: scale(1);
+-o-transform: scale(1);
+-ms-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+.dayApps{
+    position:absolute;
+    width:320px;
+    min-height:320px;
+    height:auto;
+    top:-1px;
+    left:-1px;
+    background:#34495e;
+    z-index:2;
+    display:none;   
+    padding:10px;
+    color:#fff;
+     }
+
+.dayApps a{
+    width:40%;
+    display:block;
+    text-align:center;
+    float:left;
+    margin:5px 5%;
+    padding:10px;
+    border:1px solid #fff;
+    color:#fff;
+    font-weight:bolder;
+    text-decoration:none;
+        -webkit-transition: all 75ms ease-in;
+        -moz-transition: all 75ms ease-in;
+        -ms-transition: all 75ms ease-in;
+        -o-transition: all 75ms ease-in;
+        transition: all 75ms ease-in;
+       
+}
+.dayApps a.confirm{
+    background-color:#2ecc71;
+}
+.dayApps a:hover{
+    background-color:#fff;
+    color:#34495e;
+}
+.dayApps .dayTitle{
+    width:100%;
+    display:block;
+    font-size:1.4em;
+    margin:5px 5%;
+}
+.dayApps .closeDay{
+    position:absolute;
+    top:0;
+    right:0;
+    width:auto;
+    padding:0;
+    display:block;
+    border:none;
+    line-height:20px;
+    width:20px;
+    height:20px;
+    
+}
+.dayCell.expanded .dayApps{display:block;}
+
+
+.time-popup{
+  position: relative;
+  width:100%;
+  height:100%;
+  background:#fff;
+  z-index: 9999;
+  top:0;
+  left:0;
+  padding-top:0;
+  border:1px solid #ccc;
+  overflow-y:scroll;
+}
+.time-popup span{
+  color:#fff;
+}
+.time-popup a{
+    display: block;
+    padding: 1.5em;
+    text-align: center;
+    border:1px solid #2E99CC;
+    color: #2E99CC;
+    text-decoration: none;
+    margin: 1%;
+   
+    width: 30%;
+    float: left;
+            -webkit-transition: all 75ms ease-in;
+        -moz-transition: all 75ms ease-in;
+        -ms-transition: all 75ms ease-in;
+        -o-transition: all 75ms ease-in;
+        transition: all 75ms ease-in;
+}
+.time-popup a:hover{
+    background:#2E99CC;
+    color:white;
+}
+
+
+.bookingStepWidget{
+  width:100%;
+  height:110px;
+  border:1px solid #ccc;
+  border-bottom:3px solid #ccc;
+  top:0;
+  left:0;
+  position: relative;
+  float:left;
+  background-color:white;
+  border-radius:2px;
+
+        -webkit-transition: all 750ms ease-in;
+        -moz-transition: all 750ms ease-in;
+        -ms-transition: all 750ms ease-in;
+        -o-transition: all 750ms ease-in;
+        transition: all 750ms ease-in;
+  margin-bottom:20px;
+}
+
+.bookingStepWidget.closed{
+  height:0;
+  overflow: hidden;
+  border:none;
+}
+
+.bookingStepWidget span{
+  color:#000;
+  width:100%;
+  display: block;
+  font-size:0.9em;
+  text-align:center;
+}
+span.editOverlay{
+  position: absolute;
+  top:0;
+  width:100%;
+  height:0;
+  -webkit-transition: all 75ms ease-in;
+  -moz-transition: all 75ms ease-in;
+  -ms-transition: all 75ms ease-in;
+  -o-transition: all 75ms ease-in;
+  transition: all 75ms ease-in;  
+  background-color:rgb(255, 56, 91);
+  cursor: pointer;
+  overflow: hidden;
+  color:white;
+  line-height:100px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.bookingStepWidget:hover .editOverlay{
+  height:100%;
+}
+
+
+
+.bookingStepWidget span.hourCalDisplay,
+.bookingStepWidget span.dayCalDisplay{
+  background-color:#e74c3c;
+  padding:0.25em 0;
+  font-weight:400;
+  color:#fff;
+}
+.bookingStepWidget span.hourCalDisplay{background-color:#3CC5E7}
+
+.bookingStepWidget span.dateCalDisplay{
+  font-size:2.4em;
+  font-weight:500;
+}
+
+
+
+
+
+.dateTimeWrap{
+  width:20%;
+  float:left;
+  border-right:2px solid #ccc;
+  height:100%;
+  margin-right:5%;
+  padding:1%;
+  position: relative;
+}
+
+.availableTimesWrap{
+  width:70%;
+  float:left;
+}
+.time-popup a.closeMe{background-color:rgb(255, 56, 91); width:90%; bottom:1%; position:absolute; color:white; border:none;}
+.time-popup a.closeMe:hover{background-color:rgb(190, 43, 69);}
+
+#clock{
+    width:100px;
+    height:100px;
+  
+    
+    display:block;
+    position:relative;
+    margin:auto;
+   }
+#clock .monthCalDisplay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align: center;
+}
+#center{
+    width:10px;
+    height:10px;
+    left:45px;
+    top:45px;
+    border-radius:10px;
+    position:absolute;
+    background:#e74c3c;
+}
+#minute,
+#hour{
+    width:30px;
+    height:4px;
+    position:absolute;
+    top:46px;
+    left:50px;
+    background:#e74c3c;
+    -webkit-transform-origin:left center;
+border-radius:4px;    
+}
+#minute{
+    width:45px;
+    height:2px;
+    top:48px;
+
+    
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
